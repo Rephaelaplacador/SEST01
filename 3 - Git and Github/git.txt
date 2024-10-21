@@ -1,0 +1,23 @@
+- Configure Git
+git config --global user.name "username"
+git config --global user.email "email"
+git config user.name
+git config user.email
+
+Status:
+U - Untracked
+A - Added
+M - Modified
+
+- Check the status of all files and folders
+git status
+
+- Add all the modified files to the staging area
+git add .
+
+- Create a commit
+git commit -m "This is the description"
+
+- Check the commit history
+git log
+git log --oneline
