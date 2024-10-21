@@ -1,0 +1,65 @@
+- Make directory/folder
+mkdir [directory_name]
+
+- Make a hidden directory/folder
+mkdir .[directory_name]
+
+- Remove directory/folder
+rmdir [directory_name]
+
+- Delete a hidden directory/folder
+rmdir .[directory_name]
+
+- Print Working Directory
+pwd
+
+- List all files and folder
+ls
+
+- List all files and folder including hidden files/folders
+ls -a
+
+- List all files and folder including information
+ls -l
+
+- List all files and folder including information and  hidden files/folders
+ls -la
+
+- Show all contents of a folder
+find .
+
+- Show all files of a folder
+find . -type f
+
+- Show all directory of a folder
+find . -type d
+
+- Change Directoryt
+cd
+
+- Go back one directory
+cd ..
+
+- Create a files
+touch [filename.extension]
+
+- Delete a file
+rm [filename.extension]
+
+- Move a file
+mv [filename.extension] [destination_path]
+
+- Rename a file
+mv [filename.extension] [renamed_filename.extension]
+
+- Show the content of a file
+cat [filename.extension]
+
+- Display the first lines
+head [filename.extension]
+
+- Display the last lines
+tail [filename.extension]
+
+- Custon number of lines
+head -n [number_of_lines] [filename.extension]
