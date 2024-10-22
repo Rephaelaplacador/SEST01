@@ -42,3 +42,26 @@ git merge [branch-name]
 
 - Delete a branch
 git branch -d [branch-name]
+
+Create a Remote Repository
+1. Visit githgub and login.
+2. New/Create new Repository
+3. Name of the Remote Repository
+4. Public/Private
+5. Make sure that  readme box is not ticked
+6. Click the create repository button
+
+- Add a remote to the local repository
+git remote add origin [remote-repository-url]
+
+- Confirm connection to the remote repository
+git remove -Visit
+
+- Rename the master branch to main branch
+git branch -M main
+
+- Push the files from local repository to the remote repository (First push)
+git push -u origin main
+
+- Push the files from local repository to the remote repository
+git push
