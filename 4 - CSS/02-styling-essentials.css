@@ -1,0 +1,100 @@
+#text-styling {
+    /* Default font family: Times New Roman */
+    font-family: Arial, Helvetica, sans-serif;
+
+    /* Font-Weight */
+
+
+    /* Keyword Values */
+    font-weight: bold;
+    font-weight: bolder;
+    font-weight: normal;
+    font-weight: lighter;
+
+    /* Numeric Values - 100 - 950 */
+    font-weight: 100; /* Thin (Hairline) */
+    font-weight: 200; /* Extra Light*/
+    font-weight: 300; /* Light */
+    font-weight: 400; /* Normal */
+    font-weight: 500; /* Medium */
+    font-weight: 600; /* Semi Bold */
+    font-weight: 700; /* Bold */
+    font-weight: 800; /* Extra Bold */
+    font-weight: 900; /* Black */
+    font-weight: 950; /* Extra Black */
+
+    /* Font Style */
+    font-style: oblique;
+    font-style: normal;
+    font-style: italic;
+
+    /* Text Align */
+    text-align: justify;
+    text-align: left;
+    text-align: right;
+    text-align: center;
+
+    /* Line Height */
+    line-height: 20px;
+    line-height: normal;
+    line-height: 5;
+
+    /* Letter Spacing */
+    letter-spacing: normal;
+    letter-spacing: -2px;
+    letter-spacing: 4px;
+
+}
+
+#text-decoration {
+    text-decoration: overline;
+    text-decoration: line-through;
+    text-decoration: underline overline line-through;
+    text-decoration: none;
+    text-decoration: underline;
+
+    text-decoration-style: solid ;
+    text-decoration-style: dotted;
+    text-decoration-style: double;
+    text-decoration-style: wavy;
+    text-decoration-style: dashed;
+
+    text-decoration-color: red;
+    text-decoration-thickness: 5px;
+
+    text-decoration: wavy underline red 5px;
+}
+
+#colors {
+    /* color names */
+    color: blue;
+    background-color: skyblue;
+    /* RGB */
+    /* rgb(red, green, blue) 0 - 255 */
+    /* rgba(red, green, blue, alpha) */
+    /* Alpha: [0 (Fully Transparent) - 1 (Fully Opaque)]  */
+    color: rgb(255, 0, 0);
+    background-color: rgba(0, 255, 0, 0.6);
+
+    /* Hexadecimal */
+    /* #RRGGBB */
+    /* #RRGGBBAA */
+    /* 0 - 9, A - F */
+    color: #edf2f4;
+    background-color: #2b2d42aa;
+}
+
+#absolute-unit-px {
+    font-size: 20px;
+}
+
+/* Relative to its parent */
+#relative-unit-em {
+    font-size: 1em; /* 20px */
+    font-size: 3em; /* 60px */
+}
+
+#relative-unit-rem {
+    font-size: 1rem;
+    font-size: 4em;
+}
