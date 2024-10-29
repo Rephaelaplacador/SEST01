@@ -1,0 +1,64 @@
+/* Padding to each side. */
+.box1 {
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+  padding-left: 40px;
+}
+
+/* Padding Shorthand */
+/* 1 value = All sides */
+/* 2 values = (Top and Botoom) (Left and Right) */
+/* 3 values = Top (lLeft and Right) Bottom */
+/* 4 values = Clockwise Manner */
+.box2 {
+  padding: 10px 20px 30px 40px;
+}
+
+/*  Margin - space outside the element/box  */
+.box3 {
+  margin-top: 10px;
+  margin-right: 20px;
+  margin-left: 30px;
+  margin-bottom: 40px;
+}
+
+/* Margin Shorthand */
+/* 1 value = All sides */
+/* 2 values = (Top and Bottom) (Left and Right) */
+/* 3 values = Top (Left and Right) Bottom */
+/* 4 values = Clock Wise Manner */
+.box4 {
+  margin: 10px 20px 30px 40px;
+}
+
+/* Border */
+/* 1 value = All sides */
+/* 2 values = (Top and Bottom) (Left and Right) */
+/* 3 values = Top (Left and Right) Bottom */
+/* 4 values = Clock Wise Manner */
+.mix-borders {
+  background-color: aquamarine;
+  height: 200px;
+  width: 300px;
+  border-style: solid;
+  border-style: double;
+  border-style: dotted;
+  border-style: dashed;
+  border-style: solid dotted dashed double;
+  border-width: 10px 4px 8px 6px;
+  border-color: blue violet red yellow;
+
+  /* Shorthand */
+  border: dashed tomato 10px;
+}
+
+/*  Circle Container */
+.circle-container {
+    background-color: tomato;
+    height: 100px;
+    width: 100px;
+    border-radius:  50%;
+    text-align: center;
+    color: white;
+}

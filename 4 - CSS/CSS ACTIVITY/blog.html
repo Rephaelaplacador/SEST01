@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEST10 Website</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <style>
+        
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes scaleUp {
+            from {
+                transform: scale(0.95);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        
+        header {
+            background-color: #f8f9fa; 
+            padding: 20px;
+            text-align: center;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo img {
+            height: 75px;
+            width: 260px;
+        }
+
+        .main-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px; 
+        }
+
+        .main-nav li {
+            display: inline;
+        }
+
+        .main-nav a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s;
+        }
+
+        .main-nav a:hover {
+            color: #2a9d8f; 
+        }
+
+        
+        section.latest-posts {
+            padding: 30px;
+            text-align: center;
+            animation: fadeIn 1s ease;
+        }
+
+        section.latest-posts h2 {
+            margin-bottom: 20px; 
+        }
+
+        .article {
+            width: 300px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: #ebf4f5; 
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+            animation: scaleUp 0.5s ease, bounce 0.5s ease;
+            margin: 10px; /
+        }
+
+        .article:hover {
+            transform: scale(1.05) translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            background-color: #ffebcd; /
+            color: #d2691e; 
+        }
+
+        .article h3 {
+            color: #4b0082; 
+            transition: color 0.3s ease;
+        }
+
+        .article h3:hover {
+            color: #ff4500; 
+        }
+
+        .article img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="row">
+            <div class="logo">
+                <img src="assets/logo-new.png" alt="oc_logo">
+            </div>
+            <ul class="main-nav">
+                <li class="active">
+                    <a href="index.html">HOME</a>
+                    <a href="#">SERVICES</a>
+                    <a href="#">ABOUT</a>
+                    <a href="blog.html">BLOG</a>
+                    <a href="#">CONTACT</a>
+                    <a href="#">FAQ</a>
+                </li>
+            </ul>
+        </div>
+
+        
+        <section class="latest-posts">
+            <h2 style="font-size: 4em; color: #eff5f4; animation: slideIn 2s;">Latest Posts</h2>
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <article class="article" style="animation-delay: 0s;">
+                    <img src="html.jpg" alt="HTML Basics">
+                    <h3>Getting Started with HTML</h3>
+                    <p>Learn the basics of HTML and how to structure a webpage.</p>
+                </article>
+                <article class="article" style="animation-delay: 0.1s;">
+                    <img src="css.jpg" alt="CSS Fundamentals">
+                    <h3>CSS Fundamentals</h3>
+                    <p>Master the basics of styling and layout with CSS.</p>
+                </article>
+                <article class="article" style="animation-delay: 0.2s;">
+                    <img src="js.jpg" alt="JavaScript Basics">
+                    <h3>JavaScript for Beginners</h3>
+                    <p>An introduction to programming with JavaScript.</p>
+                </article>
+            </div>
+        </section>
+    </header>
+
+    
+    <section class="contact grid-container">
+        <div class="contact-form grid-item">
+            <div class="contact-section-header">
+                <h2>Get in touch with us!</h2>
+            </div>
+            <form class="form">
+                <input type="text" name="fullname" placeholder="Fullname">
+                <input type="email" name="email" placeholder="Email Address">
+                <input type="number" name="phonenumber" placeholder="Phone Number">
+                <textarea class="subject" name="subject" placeholder="Write your message here.."></textarea>
+                <input class="button" type="submit" value="Submit">
+            </form>
+        </div>
+    </section>
+    
+</body>
+</html>
