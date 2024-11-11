@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ancestor {
+            border: 2px solid black;
+            padding: 20px;
+            margin: 20px;
+            position: relative;
+        }
+
+        /* Static Positioning */
+        /* Elements follow the normal document flow. */
+
+        /* Relative Positioning */
+        /* Position the element based on it's original position. */
+        #relative {
+            background-color: #3d405b;
+            color: #f4f1de;
+            position: relative;
+            /* top, bottom, left, right */
+            top: 40px;
+            left: 40px;
+        }
+
+        /* Absolute Positioning */
+        /* Relative to the parent container that have a position that is not static. */
+        #absolute {
+            background-color: #93e1d8;
+            color: #ffa69e;
+            position: absolute;
+            /* top, bottom, left, right */
+            bottom: 0px;
+            right: 0px;
+        }
+
+        /* Fixed Positioning */
+        /* Position of the element is relative to the viewport. */
+        #fixed{
+            background-color: #000022;
+            color: #fbf5f3;
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+        }
+
+        /* Sticky Position */
+        /* Start relative, when it hits a certain position, it will stick to it. */
+        #sticky {
+            background-color: #f27a7d;
+            color: #c5f9d7;
+            position: sticky;
+            /* top, bottom, left, right */
+            top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="ancestor">
+        <!--  CTRL + / -  Creating a comment -->
+        <!--  SHIFT + ALT + Down Arrow - Duplicating -->
+        <div>This is the first line.</div>
+        <div>This is the first line.</div>
+        <div id="relative">Relative Positioning</div>
+        <div id="absolute">Absolute Positioning</div>
+        <div id="fixed">Fixed Positioning</div>
+    </div>
+    <div id="sticky">Sticky Positioning</div>
+    <div style="height: 2000px;">
+        Scroll down to see the sticky element in action
+    </div>
+</body>
+</html>

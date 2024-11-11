@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Flexbox</title>
+    <style>
+        .container {
+          height: 1000px;
+          background-color: #A8DADC;
+        }
+
+        .flexItems {
+          width: 200px;
+          margin: 10px;
+          border: 6px #457B9D solid;
+          border-radius: 12px;
+          background-color: #F1FAEE;
+          text-align: center;
+          font-size: 40px;
+        }
+
+        .flexContainer {
+          display: flex;
+          flex-direction: row; /* Default */
+          /* flex-direction: column; */
+
+          /* justify-content: space-between; */
+          /* justify-content: space-around; */
+          /* justify-content: space-evenly; */
+          /* justify-content: flex-end; */
+          /* justify-content: center; */
+          justify-content: flex-start; /* Default */
+
+          /* align-items: flex-start; */
+          /* align-items: flex-end; */
+          /* align-items: center; */
+          align-items: stretch; /* Default */
+          
+          /* flex-wrap: wrap; */
+          /* flex-wrap: wrap-reverse; */
+          flex-wrap: nowrap; /* Default */
+
+          /* This will work if you are in a wrapping state. */
+          /* align-content: flex-start; */
+          /* align-content: flex-end; */
+          /* align-content: space-between; */
+          /* align-content: space-around; */
+          /* align-content: space-evenly; */
+        }
+
+        .flexItem3 {
+            /* Willingness to grow */
+            flex-grow: 0; /* Default */
+            flex-grow: 1;
+        }
+
+        .flexItem3 {
+            /* Willingness to shrink */
+            flex-shrink: 1; /* Default */
+            flex-shrink: 0; /* Not willing to shrink */
+        } 
+    </style>
+    <link rel="stylesheet" href="./flexbox.css" />
+  </head>
+  <body>
+    <div class="container flexContainer">
+      <div class="flexItems flexItem1">1</div>
+      <div class="flexItems flexItem2">2</div>
+      <div class="flexItems flexItem3">3</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expressions Results</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+
+    <script>
+        
+      let x = 10;
+
+      document.getElementById("demo").innerHTML =
+        "1. x == 10: " + (x == 10) + "<br>" +
+        "2. x === '10': " +  (x === "10") + "<br>" +
+        "3. x === 10: " + (x === 10) + "<br>" +
+        "4. x != 10: " + (x != 10) + "<br>" +
+        "5. x < 10: " + (x < 10) + "<br>" +
+        "6. x > 10: " + (x > 10) + "<br>" +
+        "7. x <= 10: " + (x <= 10) + "<br>" +
+        "8. x >= 10 && x != 5: " + (x >= 10 && x != 5) + "<br>" +
+        "9. x != 5 || x < 5: " + (x != 5 || x < 5) + "<br>" +
+        "10. !(x > (5 + x)): " + !(x > 5 + x);
+        
+    </script>
+  </body>
+</html>

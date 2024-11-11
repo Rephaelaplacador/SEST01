@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Website Layout</title>
+    <style>
+        *  {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial;
+            padding: 10px;
+            background: #f1f1f1;
+        }
+
+        .header {
+            background-color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .leftcolumn {
+            float: left;
+            width: 75%;
+        }
+
+        .rightcolumn {
+            float: left;
+            width: 25%;
+            background-color: #f1f1f1;
+            padding: 20px;
+        }
+
+        .fakeimg {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .footer {
+            padding:  20px;
+            text-align: center;
+            background: #ddd;
+            margin-top: 20px;
+        }
+
+        /* Responsive layout - when the screen is less than 800px wide, it will make the 2 columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 100px) {
+            .leftcolumn .rightcolumn {
+                width: 100%;
+                padding: 0;
+            }
+        }
+
+        /* Responsive layout - when the screen is less than 400px wide, it will make the navigation links on top of each other instead of next to each other */
+        @media screen and (max-width: 400px) {
+            .topnav a {
+                float: none;
+                width: 100%;
+            }            
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Header</h1>
+    </div>
+    <div class="topnav">
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact Us</a>
+    </div>
+    <div class="row">
+        <div class="leftcolumn">
+            <div class="card">
+                <h2>TITLE HEADING</h2>
+                <h5>This is a description, October 30th, 2024</h5>
+                <div class="fakeimg" style="height: 200px;">image</div>
+                <p>Additional text</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti mollitia quas eaque beatae. Eius tenetur placeat natus perferendis, pariatur ullam officiis aliquid ipsam et consequatur molestias veniam culpa ea quas.</p>
+            </div>
+            <div class="card">
+                <h2>TITLE HEADING</h2>
+                <h5>This is a description, October 29th, 2024</h5>
+                <div class="fakeimg" style="height: 200px;">image</div>
+                <p>Additional text</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti mollitia quas eaque beatae. Eius tenetur placeat natus perferendis, pariatur ullam officiis aliquid ipsam et consequatur molestias veniam culpa ea quas.</p>
+            </div>
+        </div>
+
+        <div class="rightcolumn">
+            <div class="card">
+                <h2>About Me</h2>
+                <div class="fakeimg" style="height: 100px;">image</div>
+                <p>Additional text</p>
+            </div>
+            <div class="card">
+                <h3>Popular Posts</h3>
+                <div class="fakeimg">image</div>
+                <div class="fakeimg">image</div>
+                <div class="fakeimg">image</div>
+            </div>
+            <div class="card">
+                <h3>Follow us on Social Media</h3>
+                <p>Some random text we can add</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h2>Footer</h2>
+    </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid</title>
+    <style>
+      body {
+        background-color: #e3d9c1;
+      }
+
+      .gridItem {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 20px;
+      }
+
+      .gridContainer {
+        display: grid;
+
+        /* Using px */
+        grid-template-columns: 200px 200px 200px 200px;
+        grid-template-rows: 200px 200px 200px 200px;
+
+        /* Using auto */
+        grid-template-columns: auto auto auto auto;
+
+        /* Using percentages */
+        grid-template-columns: 33% 33% 33%;
+        border: 2px solid black;
+        
+        /* Using fractional units */
+        grid-template-columns: 1fr 1fr 1fr;
+
+        /* Repeat Function */
+        /* repeat(howmanytimes, unit) */
+        grid-template-columns: repeat(4, 1fr);
+
+        /* Column and Row Gap */
+        row-gap: 10px;
+        column-gap: 20px;
+        gap: 10px;
+      }
+    </style>
+    <link rel="stylesheet" href="./grid.css" />
+  </head>
+  <body>
+    <div class="gridContainer">
+      <div class="gridItem">Home</div>
+      <div class="gridItem">About Us</div>
+      <div class="gridItem">Contact Us</div>
+      <div class="gridItem">Mission</div>
+      <div class="gridItem">Vision</div>
+      <div class="gridItem">Cart</div>
+      <div class="gridItem">Events</div>
+      <div class="gridItem">Testimonials Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, necessitatibus.</div>
+      <div class="gridItem">Support</div>
+      <div class="gridItem">Careers</div>
+      <div class="gridItem">Product 1</div>
+      <div class="gridItem">Product 2</div>
+      <div class="gridItem">Product 3</div>
+      <div class="gridItem">Product 4</div>
+      <div class="gridItem">Product 5</div>
+      <div class="gridItem">Product 6</div>
+      <div class="gridItem">Product 7</div>
+      <div class="gridItem">Product 8</div>
+      <div class="gridItem">Product 9</div>
+      <div class="gridItem">Product 10</div>
+      <div class="gridItem">Product 11</div>
+      <div class="gridItem">Product 12</div>
+      <div class="gridItem">Product 13</div>
+      <div class="gridItem">Product 14</div>
+      <div class="gridItem">Product 15</div>
+    </div>
+  </body>
+</html>

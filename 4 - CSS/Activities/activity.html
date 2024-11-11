@@ -1,48 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <title>CSS Activity</title>
-        <style>
-            div.gallery {
-                margin: 5px;
-                border: 1px solid #ccc;
-                float: left;
-                width: 100px;
-            }           
-
-            div.gallery:hover {
-                border: 1px solid #777;
-            }
-
-            div.gallery img {
-                width: 100%;
-                height: auto;
-            }
-
-            div.desc {
-                padding: 15px;
-                text-align: center;
-            }
-        </style>
+    <title>JS Practice</title>
 </head>
 <body>
-    <div class="gallery">
-        <a target="_balank" href="cat.jpg">
-            <img src="cat.jpg" alt="cat" width="600" height="500">
-        </a>
-        <div class="desc">This is a picture of a Cat</div>
-    </div>
-    <div class="gallery">
-        <a target="_balank" href="dog.jpg">
-            <img src="dog.jpg" alt="cat" width="600" height="500">
-        </a>
-        <div class="desc">This is a picture of a Dog</div>
-    </div>
-    <div class="gallery">
-        <a target="_balank" href="hamster.jpg">
-            <img src="hamster.jpg" alt="cat" width="600" height="500">
-        </a>
-        <div class="desc">This is a picture of a Hamster</div>
-    </div>
+    <h2>What can JavaScript do?</h2>
+    <p>JS should change the HTML attribute values</p>
+    <p>It should change the value of the src attribute of an image</p>
+    
+    <button onclick="document.getElementById('myImage').src='bulb_on.gif'">Turn on the light</button>
+    <img id="myImage" src="bulb_off.gif" style="width: 100px;">
+    
+
+    <button onclick="document.getElementById('myImage').src='bulb_off.gif'">Turn off the light</button>
+
 </body>
 </html>
