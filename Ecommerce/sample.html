@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+    JavaScript and the DOM
+    The script element src atrribute
+
+    -- relative pathe (referenced locally) --
+    <script src="script.js"></script>
+    
+    -- absolute path (hosted somewhere else) --
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js></script>  
+    
+    
+    - defer attribute of a script tag that is a boolean attribute that loaded but not executed until the entire HTML document is fully parsed
+    
+    <script src="script.js" defer></script>
+
+    - async attribute are loaded synchronously as they appear in an HTML. This attribute can be used to load the scripts asynchronously such as they will load the background asynchronously without blocking the html parser
+
+    <script src="script.js"></script>
+
+    HTML DOM (Document Object Model)
+        - an interface between scripting languages and a web page's structure. The browser creates DOM for each web page that it renders
+
+    removeChild() method
+
+    const groceryList = document.getElementById('groceryList');
+    const hotdog = document.getElementById('hotdog')
+    
+    groceryList.removeChild(hotdog);
+
+    The element.parentNode Property
+    - this is a property of an element that can be returned to a reference to its direct parent
+    -->
+    <!-- <div id="parent">
+        <a href="" id="first-child">sample text for child</a>
+        <a href="" id="second-child">sample text for child</a>
+    </div>
+    <script>
+        const firstChild = document.getElementById('first-child');
+        firstChild.parentnode; //reference to the #parent div
+    </script> -->
+
+    <!-- 
+    document.createElement() Method
+    - create and returns a reference to a new element node with specified tag name
+     -->
+    <!-- <script>
+        const newButton = document.createElement("button");
+        newButton.innerText = "This is a new button";
+
+        //append to body
+        document.body.appendChild(newButton);
+    </script> -->
+
+    <!-- 
+    element.InnerHTML Property
+    - can be used to access the HTML markup that makes up an element's content 
+    -->
+    <!-- <box>
+        <p>Hello there!</p>
+    </box>
+    <script>
+        const box = document.querySelector('box');
+
+        //reassign the value
+        box.innerHTML = '<p>Good bye</p>'
+    </script> -->
+
+    <!-- <div>
+        <p>Hello there!</p>
+    </div>
+    <script>
+        const firstDiv = document.querySelector('box');
+
+        const navMenu = document.getElementByID('main-navigatiobn');
+        const firstButtonChild = navMenu.querySelector('.button');
+    </script> -->
+    <!-- The element.appendChild() method appends an element as the last child of the parent -->
+    <!-- <li id="List">
+        <p>Hello there!</p>
+    </li>
+    <script>
+        const firstDiv = document.createElement('li');
+        document.getElementById('list').appendChild
+    </script> -->
+
+    <!-- 
+    getElementsByClassName
+    - returns a collection of elements with a specified classname 
+    
+    change the text of the first element with class = "test"
+    -->
+    <!-- <div class="test">firstElement</div>
+    <div class="test">SecondElement</div>
+
+    <script>
+      const collection = document.getElementsByClassName("test");
+      collection[0].innerHTML = "Hello World";
+    </script> -->
+
+    <!-- 
+    getElementsByName() Method
+    - returns a collection of  elements with a SPECIFIED NAME
+    -->
+    <!-- <p>First Name: <input name='fname' type="text" value="Jane"></p>
+    <p>Last Name: <input name='lname' type="text" value="Doe"></p>
+
+    <p id="demo"></p>
+    
+    <script>
+        let elements = document.getElementsByName('fname');
+        document.getElementsByName("demo"),innerHTML = elements[0.tagName;]
+    </script> -->
+
+    <!--
+    getElementsByName() Method
+    - returns a collection of elements with a SPECIFIED NAME
+    -->
+    <!-- Boy:
+    <input name="person" type="checkbox" value="Boy">
+    Girl:
+    <input name="person" type="checkbox" value="Girl">
+
+    <p id="demo"></p>
+
+   <script>
+       let num = document.getElementsByName("person").length;
+       document.getElementById("demo").innerHTML = num;
+   </script> -->
+
+    <!-- 
+   getElementByTagName() Method
+   - returns a collection of elements with a SPECIFIED TAG NAME
+   -->
+    <p>Unordered List:</p>
+    <ul>
+      <li>Apple</li>
+      <li>Banana</li>
+      <li>Coffee</li>
+    </ul>
+
+    <script>
+      const collection = document.getElementsByTagName("li");
+      document.getElementByID("demo").inneHTML = collection[3].innerHTML;
+    </script>
+  </body>
+</html>
