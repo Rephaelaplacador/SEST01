@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        Javascripts Events
+        - These are the things that happens in the system you are programming when it is triggered
+        - They are sometimes called event listeners, they are interchangeable for a certain purpose but listeners listens out for the event that is happening.
+    -->
+
+    <!-- <button>Change color</button>
+
+    <script>
+        const btn = document.querySelector("button")
+
+        function random(number) {
+            return Math.floor(Math.random()*(number +1));
+        }
+        //Math.random and Math.floor are used together to return random integers
+
+        btn.addEventListener("click", () => {
+            const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+
+            //Style backgroundColor Property
+            document.body.style.backgroundColor = rndCol;
+        });
+
+    </script> -->
+
+    <!-- <script>
+        const btn = document.querySelector("button")
+
+        function random(number) {
+            return Math.floor(Math.random()*(number +1));
+        }
+        //Math.random and Math.floor are used together to return random integers
+
+        btn.addEventListener("focus", () => {
+            const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+
+            //Style backgroundColor Property
+            document.body.style.backgroundColor = rndCol;
+        });
+
+    </script> -->
+
+    <!-- <script>
+        const btn = document.querySelector("button")
+
+        function random(number) {
+            return Math.floor(Math.random()*(number +1));
+        }
+        //Math.random and Math.floor are used together to return random integers
+
+        btn.addEventListener("dblclick", () => {
+            const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+
+            //Style backgroundColor Property
+            document.body.style.backgroundColor = rndCol;
+        });
+
+    </script> -->
+
+    <!-- <script>
+        const btn = document.querySelector("button")
+
+        function random(number) {
+            return Math.floor(Math.random()*(number +1));
+        }
+        //Math.random and Math.floor are used together to return random integers
+
+        btn.addEventListener("mouseover", () => {
+            const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+
+            //Style backgroundColor Property
+            document.body.style.backgroundColor = rndCol;
+        });
+
+    </script> -->
+
+    <!-- <input type="text" id="demo">
+    //keydown - triggers an event when a user presses a key
+    //keyup - triggers an event when a user releases a key
+    //keypress - triggers when the user pressed and released a key
+    <script>
+        document.getElementById("demo").addEventListener("keydown", bgcolorFunction)
+
+        function bgcolorFunction() {
+            document.getElementById("demo").style.backgroundColor = 'yellow';
+        }
+    </script> -->
+
+    <!-- <input type="text" id="demo">
+
+    <script>
+        document.getElementById("demo").addEventListener("keyup", bgcolorFunction)
+
+        function bgcolorFunction() {
+            document.getElementById("demo").style.backgroundColor = 'yellow';
+        }
+    </script> -->
+    
+    <!-- <button>Change color</button>
+
+    <script>
+        
+        const controller = new AbortController();
+
+        btn.addEventListener("click", () => {
+            const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+            document.body.style.backgroundColor = rndCol;
+        }, 
+        {
+            signal:controller.abort() //pass an abortSignal to the handler            
+        });
+
+    </script> -->
+
+    <!-- <button id="btn">Click me!</button>
+    <p id="demo"></p>
+
+    <script>
+        var x = document.getElementById("btn");
+
+        x.addEventListener('mouseover', firstFunction);
+        x.addEventListener('click', secondFunction);
+
+        function firstFunction() {
+            document.getElementById("demo").innerHTML += "mouseover <br>";
+        }
+
+        function secondFunction() {
+            document.getElementById("demo").innerHTML += "clicked <br>";
+        }
+    </script> -->
+
+    <!-- <div id="div1">
+        <p>This div element has a mouseover event handler</p>
+        <p>Click the button to remove the event handler</p>
+        <button onclick="removeHandler()" id="btn">Remove</button>
+    </div>
+
+    <p id="demo"></p>
+
+    <script>
+        document.getElementById("div1").addEventListener("mousemove", firstFunction);
+
+        function firstFunction() {
+            document.getElementById("demo").innerHTML = Math.random();
+        } 
+
+        function removeHandler() {
+            document.getElementById("div1").removeEventListener("mouseover", firstFunction);
+        } 
+    </script> -->
+
+
+</body>
+</html>
