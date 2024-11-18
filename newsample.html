@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 
+    How does API Calls work?
+    1. Request - Your app send a request to an API Endpoint (eg. http://127.0.0.1:8000)
+     > Get - Retrieve Data
+     > Post - Send
+     > Put/Patch - Update data
+     > Delete - Remove data
+
+    2. Response - The server processes the request and send back a response usually in JSON Format.
+    -->
+
+    <h2>Simple API Test</h2>
+    <button id="getButton">Make GET Request</button>
+    <button id="postButton">Make POST Request</button>
+    <div id="result">
+        <pre id="responsed">No data yet..</pre>
+    </div>
+
+    <script>
+        // Deefine the API Base URL (using JSONPlaceholder for testing)
+        const apiBaseUrl = "https://jsonplaceholder.typicode.com";
+
+        // Function to handle GET request
+        async function handleGetRequest() {
+        try {
+            const response = await fetch(`${apiBaseUrl}/posts/1`); // Example GET request to fetch a post
+            const data = await response.json();
+            displayResult(data);
+        } catch (error) {
+            displayResult({ error: error.message });
+        }
+    }
+
+        // Function to handle POST request
+        async function handlePostRequest() {
+        try {
+            const response = await fetch(`${apiBaseUrl}/posts`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                title: "foo",
+                body: "bar",
+                userId: 1,
+            }), // Example payload
+            });
+            const data = await response.json();
+            displayResult(data);
+        } catch (error) {
+            displayResult({ error: error.message });
+        }
+    }
+
+    // Function to display results in the response  section
+    function displayResult(data) {
+        const responseDataElement = document.getElementById("responsed");
+        responseDataElement.textContent = JSON.stringify(data, null, 2);
+    }
+
+    // Attach event listeners to button
+    document.getElementById("getButton").addEventListener("click", handleGetRequest);
+    document.getElementById("postButton").addEventListener("click", handlePostRequest);
+    </script>
+</body>
+</html>

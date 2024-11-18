@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #dragBox {
+        width: 100px;
+        height: 100px;
+        background-color: coral;
+        cursor: move;
+      }
+
+      #dropArea {
+        width: 200px;
+        height: 200px;
+        border: 2px dashed #333;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Section 1 - Client Storage 
+    > Cookies - HTTP cookies is a piece of data that a server sends to the browser
+    > localStorage - This is designed to store name-value pairs. This is an object with additional methods. 
+        eg.
+            setItem(name, value)
+            removeItem(name)
+            getItem(name)
+            key(index)
+            clear()
+
+    > sessionStorage - stores data only for a session. It means the data stored here will be deleted when the browser is closed
+    > indexDB - to create web apps that can work both online and offline 
+    
+    Section 2 - Geolocation
+    > it allows the web application to access your location if you agree to share it
+
+    Section 3 - Drag and Drop
+    > to enable web apps to use the drag and drop features in browser
+
+    Section 4 - Notification API
+    > This allows us to display notifications to the users 
+    const greeting = new Notification('Hi, how are you?',{
+    body:'Have a good day',
+    icon: './img/hello.jpg'});
+
+
+    <div id="dragBox" draggable="true">Drag Me!</div>
+    <div id="dropArea">Drop Here</div>
+    <script src="app.js"></script>
+
+    greeting.closed();
+
+    Section 5 - Web Worker
+    > A Javascript running in the background without affecting the performance of the page
+
+    Blob() > returns a newly created blob which contains concatenation of all the data in the array passed into the constructor
+    -->
+    <h1 id="counter">Count: 0</h1>
+
+    <script>
+        //check if the browser supports web workers
+        if(window.Worker) {
+            const workerCode = `
+            let count = 0;
+            function countNumbers() {
+                count++;
+                postMessage(count); //send count to the main thread
+                setTimeout(countNumbers, 1000) //Repeats every second
+            }
+                countNumbers();
+            `;
+
+            const workerBlob = new Blob([workerCode], {type: 'application/javascript'});
+            const worker = new Worker(URL.createObjectURL(workerBlob));
+
+            worker.onmessage = function(event) {
+                document.getElementById("counter").textContent = "Count: " + event.data;
+            }
+        }
+    </script>
+    
+  </body>
+</html>
